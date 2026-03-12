@@ -15,7 +15,7 @@ ARG ADDITIONAL_APT_PACKAGES=""
 
 # This Dockerfile builds on the Ubuntu-based mathworks/matlab image.
 # To check the available matlab images, see: https://hub.docker.com/r/mathworks/matlab
-FROM mathworks/matlab:$MATLAB_RELEASE
+FROM mathworks/matlab-deep-learning:$MATLAB_RELEASE
 
 # Declare the global argument to use at the current build stage
 ARG MATLAB_RELEASE
