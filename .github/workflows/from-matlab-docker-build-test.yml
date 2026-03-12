@@ -19,7 +19,7 @@ on:
     - cron: "0 0 * * 1"
 
 env:
-  IMAGE_BASE_NAME: from-matlab-docker
+  IMAGE_BASE_NAME: ghcr.io/${{ github.repository_owner }}/matlab # from-matlab-docker
   ALT_PATH: alternates/building-on-matlab-docker-image
   LICENSE_FILE_PATH: ${{ github.workspace }}/license.lic
 
@@ -71,6 +71,8 @@ jobs:
             MATLAB_RELEASE=${{ matrix.matlab-release }}
           tags: |
             ${{ env.IMAGE_BASE_NAME }}:${{ matrix.matlab-release }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       # - name: Set up Python 3
       #   uses: actions/setup-python@v5
