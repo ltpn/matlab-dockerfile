@@ -71,8 +71,8 @@ jobs:
             MATLAB_RELEASE=${{ matrix.matlab-release }}
           tags: |
             ${{ env.IMAGE_BASE_NAME }}:${{ matrix.matlab-release }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          # cache-from: type=gha
+          # cache-to: type=gha,mode=max
 
       # - name: Set up Python 3
       #   uses: actions/setup-python@v5
