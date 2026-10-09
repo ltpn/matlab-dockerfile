@@ -21,6 +21,26 @@ If you encounter a technical issue or have an enhancement request, create an iss
 
 ## Changelog
 
+### 2026.7.1 - October 1, 2026
+- **Changed**: Internal improvements and bug fixes.
+
+### 2026.7 - September 17, 2026
+- **Added**: Download and install a prerelease by specifying `--release` as `R20XXyPrerelease` or `R20XXyPrereleaseUn` when a prerelease is available.
+
+### 2026.6 - August 26, 2026
+- **Added**: Support for installing support packages with third-party dependecies from Artifactory in offline environments using the `--repo-config` option of `mpm install`. Previously, only online installs were supported.
+
+### 2026.5.1 - August 6, 2026
+- **Changed**: Internal improvements and bug fixes. 
+
+### 2026.5 - July 22, 2026
+- **Added**: Install support packages to a custom folder using the `--support-package-destination` option of `mpm install`.
+- **Added**: Progress indicator on the command line during download and install.
+- **Added**: Version availablity check with `mpm --version`. If a new version of `mpm` is avilable, the output includes an update notification and a download link.
+
+### 2026.4 - May 27, 2026
+- **Added**: Use `mpm list` to display all products installed in a specified MATLAB root folder.
+
 ### 2026.3 - April 1, 2026
 - **Added**: Download and install support packages that require accepting vendor license agreements using the `--accept-vendor-licenses` option of `mpm download` and `mpm install`. The following support packages are now supported with this option:
     - Image Acquisition Toolbox™ Support Package for GenICam™ Interface
